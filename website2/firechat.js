@@ -6,7 +6,7 @@
 
 this["FirechatDefaultTemplates"] = this["FirechatDefaultTemplates"] || {};
 
-this["FirechatDefaultTemplates"]["templates/layout-full.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'firechat\' class=\'full\'>\n<div id=\'firechat-header\' class=\'clearfix\'>\n<div class=\'clearfix\'><div class=\'half firechat-dropdown\' style=\'\'>\n<a id=\'firechat-btn-rooms\' class=\'firechat-dropdown-toggle btn full\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon user-chat\'></span>\nChat Rooms\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu full\' role=\'menu\'><ul id=\'firechat-room-list\'></ul><div class=\'firechat-dropdown-footer aligncenter\'>\n<button type=\'button\' class=\'btn twothird center\' id=\'firechat-btn-create-room-prompt\'>Create Room</button>\n<button type=\'button\' class=\'btn twothird center\' id=\'firechat-btn-create-form-prompt\'>Create Form</button>\n</div></div></div>\n<div class=\'half firechat-dropdown\' style=\'\'>\n<a data-event=\'firechat-user-search-btn\' class=\'btn full firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon user-group\'></span>\nVisitors\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/user-search-list-item.html\' data-target=\'firechat-user-search\' data-controls=\'firechat-user-search-controls\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-user-search\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-user-search-controls\' class=\'clearfix\'>\n<span class="quarter"></span>\n<button type=\'button\' class=\'btn half\' data-event=\'firechat-user-search\' data-toggle=\'firechat-pagination-next\' data-template=\'templates/user-search-list-item.html\' data-target=\'firechat-user-search\' data-controls=\'firechat-user-search-controls\' disabled=disabled>Next</button>\n</div><label class=\'center full\'>\n<small>Use "+ Invite" button within chat rooms for regular invites.</small>\n</label>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id=\'firechat-tabs\' class=\'clearfix\'>\n<ul id=\'firechat-tab-list\' class=\'nav nav-tabs clearfix\'></ul>\n<div id=\'firechat-tab-content\' class=\'tab-content\'></div>\n</div><div id=\'firechat-footer\' class=\'clearfix\'></div>\n</div>';}return __p};
+this["FirechatDefaultTemplates"]["templates/layout-full.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'firechat\' class=\'full\'>\n<div id=\'firechat-header\' class=\'clearfix\'>\n<div class=\'clearfix\'><div class=\'half firechat-dropdown\' style=\'\'>\n<a id=\'firechat-btn-rooms\' class=\'firechat-dropdown-toggle btn full\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon user-chat\'></span>\nChat Rooms\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu full\' role=\'menu\'><ul id=\'firechat-room-list\'></ul><div class=\'firechat-dropdown-footer aligncenter\'>\n<button type=\'button\' class=\'btn twothird center\' id=\'firechat-btn-create-room-prompt\'>Create Room</button>\n</div></div></div>\n<div class=\'half firechat-dropdown\' style=\'\'>\n<a data-event=\'firechat-user-search-btn\' class=\'btn full firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon user-group\'></span>\nVisitors\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/user-search-list-item.html\' data-target=\'firechat-user-search\' data-controls=\'firechat-user-search-controls\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-user-search\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-user-search-controls\' class=\'clearfix\'>\n<span class="quarter"></span>\n<button type=\'button\' class=\'btn half\' data-event=\'firechat-user-search\' data-toggle=\'firechat-pagination-next\' data-template=\'templates/user-search-list-item.html\' data-target=\'firechat-user-search\' data-controls=\'firechat-user-search-controls\' disabled=disabled>Next</button>\n</div><label class=\'center full\'>\n<small>Use "+ Invite" button within chat rooms for regular invites.</small>\n</label>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id=\'firechat-tabs\' class=\'clearfix\'>\n<ul id=\'firechat-tab-list\' class=\'nav nav-tabs clearfix\'></ul>\n<div id=\'firechat-tab-content\' class=\'tab-content\'></div>\n</div><div id=\'firechat-footer\' class=\'clearfix\'></div>\n</div>';}return __p};
 
 this["FirechatDefaultTemplates"]["templates/layout-popout.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'firechat\' class=\'full\'>\n<div id=\'firechat-tabs\' class=\'clearfix\'>\n<ul id=\'firechat-tab-list\' class=\'nav nav-tabs clearfix\'></ul>\n<div id=\'firechat-tab-content\' class=\'tab-content\'></div>\n</div>\n</div>';}return __p};
 
@@ -15,8 +15,6 @@ this["FirechatDefaultTemplates"]["templates/message-context-menu.html"] = functi
 this["FirechatDefaultTemplates"]["templates/message.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape, __j = Array.prototype.join;function print() { __p += __j.call(arguments, '') }with (obj) {__p += '<div class=\'message message-' +__e( type ) +' '; if (isSelfMessage) { ;__p += ' message-self '; } ;__p += '\' data-message-id=\'' +__e( id ) +'\' data-user-id=\'' +__e( userId ) +'\' data-user-name=\'' +__e( name ) +'\' data-class="firechat-message">\n<div class=\'clearfix\'>\n<label class=\'fourfifth\'>\n<strong class=\'name\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</strong>\n<em>(' +__e( localtime ) +')</em>:\n</label>'; if (!disableActions) { ;__p += '\n<label class=\'fifth alignright\'>\n<a href=\'#!\' data-event=\'firechat-user-chat\' class=\'icon user-chat\' title=\'Invite to Private Chat\'>&nbsp;</a>\n<a href=\'#!\' data-event=\'firechat-user-mute-toggle\' class=\'icon user-mute\' title=\'Mute User\'>&nbsp;</a>\n</label>\n'; } ;__p += '</div>\n<div class=\'clearfix message-content\'>\n' +((__t = ( message )) == null ? '' : __t) +'\n</div>\n</div>';}return __p};
 
 this["FirechatDefaultTemplates"]["templates/prompt-alert.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div class=\'aligncenter clearfix\'>\n<h6>' +__e( message ) +'</h6>\n<p class=\'clearfix\'>\n<button type=\'button\' class=\'btn quarter right close\'>Close</button>\n</p>\n</div>';}return __p};
-
-this["FirechatDefaultTemplates"]["templates/prompt-create-private-form.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div class=\'clearfix\'>\n<h6>Give your form a name:</h6>\n<input data-input=\'firechat-room-name\' type=\'text\' placeholder=\'Room name...\' style=\'margin-bottom: 5px;\' maxlength=\'' +__e( maxLengthRoomName ) +'\'>\n</div>';}return __p};
 
 this["FirechatDefaultTemplates"]["templates/prompt-create-room.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div class=\'clearfix\'>\n<h6>Give your chat room a name:</h6>\n<input data-input=\'firechat-room-name\' type=\'text\' placeholder=\'Room name...\' style=\'margin-bottom: 5px;\' maxlength=\'' +__e( maxLengthRoomName ) +'\'>\n</div>';}return __p};
 
@@ -36,7 +34,7 @@ this["FirechatDefaultTemplates"]["templates/room-user-list-item.html"] = functio
 
 this["FirechatDefaultTemplates"]["templates/room-user-search-list-item.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape, __j = Array.prototype.join;function print() { __p += __j.call(arguments, '') }with (obj) {__p += '<li data-user-id=\'' +__e( id ) +'\' data-user-name=\'' +__e( name ) +'\'>\n<a href=\'#!\' class=\'clearfix\'>\n'; if (disableActions) { ;__p += '\n<span class=\'left fourfifth clipped\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</span>\n'; } else { ;__p += '\n<span data-event=\'firechat-user-invite\' class=\'left fourfifth clipped\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</span>\n<span data-event=\'firechat-user-invite\' class=\'icon plus right\' title=\'Invite to Room\'>+</span>\n'; } ;__p += '\n</a>\n</li>';}return __p};
 
-this["FirechatDefaultTemplates"]["templates/tab-content.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'' +__e( id ) +'\' data-room-id=\'' +__e( id ) +'\' class=\'tab-pane\'>\n<div class=\'tab-pane-menu clearfix\'><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-room-list-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\' data-target=\'firechat-room-user-list-' +__e( id ) +'\'>\n<span class=\'icon user-group\'></span>\nIn Room\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<ul id=\'firechat-room-user-list-' +__e( id ) +'\' class=\'full\'></ul>\n</div>\n</div><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-search-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon plus\'>+</span>\nInvite\n<span class=\'caret\'></span>\n</a><div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-room-user-search-' +__e( id ) +'\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'clearfix\'><span class="quarter"></span>\n<!--\n<button type=\'button\' class=\'btn third disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-prev\' disabled=disabled>Prev</button>\n-->\n<button type=\'button\' class=\'btn half disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-next\'  disabled=disabled>Next</button>\n</div>\n</div>\n</div>\n</div><a href=\'#!\' data-event=\'firechat-close-tab\' class=\'icon close right\' style=\'15px 5px\' title=\'Leave Room\'></a></div><div class=\'clearfix\'>\n<div id=\'firechat-messages' +__e( id ) +'\' class=\'chat\'></div>\n</div><div id=\'chat-type\' class=\'clearfix\'>\n<label>Your message:</label>\n<textarea id=\'textarea' +__e( id ) +'\' placeholder=\'Type your message here...\'></textarea>\n</div><div id=\'form-type\' class=\'clearfix\'>\n<label>Fill in:</label>\n<textarea class=\'form1\' id=\'form-textarea' +__e( id ) +'\' placeholder=\'Answer the questions here...\'></textarea>\n</div>\n</div>';}return __p};
+this["FirechatDefaultTemplates"]["templates/tab-content.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div id=\'' +__e( id ) +'\' data-room-id=\'' +__e( id ) +'\' class=\'tab-pane\'>\n<div class=\'tab-pane-menu clearfix\'><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-room-list-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\' data-target=\'firechat-room-user-list-' +__e( id ) +'\'>\n<span class=\'icon user-group\'></span>\nIn Room\n<span class=\'caret\'></span>\n</a>\n<div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<ul id=\'firechat-room-user-list-' +__e( id ) +'\' class=\'full\'></ul>\n</div>\n</div><div class=\'firechat-dropdown twofifth\'>\n<a data-event=\'firechat-user-search-btn\' class=\'full btn firechat-dropdown-toggle\' data-toggle="firechat-dropdown" href=\'#\'>\n<span class=\'icon plus\'>+</span>\nInvite\n<span class=\'caret\'></span>\n</a><div class=\'firechat-dropdown-menu\' role=\'menu\'>\n<div class=\'firechat-dropdown-header aligncenter clearfix\'>\n<div class=\'search-wrapper\'>\n<span class=\'icon search\'></span>\n<input type=\'text\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'center fivesixth\'>\n</div>\n</div>\n<ul id=\'firechat-room-user-search-' +__e( id ) +'\'></ul><div class=\'firechat-dropdown-footer aligncenter clearfix\'>\n<div id=\'firechat-room-user-search-controls-' +__e( id ) +'\' class=\'clearfix\'><span class="quarter"></span>\n<!--\n<button type=\'button\' class=\'btn third disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-prev\' disabled=disabled>Prev</button>\n-->\n<button type=\'button\' class=\'btn half disabled\' data-event=\'firechat-user-search\' data-template=\'templates/room-user-search-list-item.html\' data-target=\'firechat-room-user-search-' +__e( id ) +'\' data-controls=\'firechat-room-user-search-controls-' +__e( id ) +'\' data-toggle=\'firechat-pagination-next\'  disabled=disabled>Next</button>\n</div>\n</div>\n</div>\n</div><a href=\'#!\' data-event=\'firechat-close-tab\' class=\'icon close right\' style=\'15px 5px\' title=\'Leave Room\'></a></div><div class=\'clearfix\'>\n<div id=\'firechat-messages' +__e( id ) +'\' class=\'chat\'></div>\n</div><div class=\'clearfix\'>\n<label>Your message:</label>\n<textarea id=\'textarea' +__e( id ) +'\' placeholder=\'Type your message here...\'></textarea>\n</div>\n</div>';}return __p};
 
 this["FirechatDefaultTemplates"]["templates/tab-menu-item.html"] = function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<li data-room-id=\'' +__e( id ) +'\'>\n<a href=\'#' +__e( id ) +'\' data-toggle=\'firechat-tab\' title=\'' +__e( name ) +'\'>' +__e( name ) +'</a>\n</li>';}return __p};
 
@@ -362,7 +360,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
   };
 
   // Create and automatically enter a new chat room.
-  Firechat.prototype.createRoom = function(roomName, roomType, roomStyle, callback) {
+  Firechat.prototype.createRoom = function(roomName, roomType, callback) {
     var self = this,
         newRoomRef = this._roomRef.push();
 
@@ -370,7 +368,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
       id: newRoomRef.key(),
       name: roomName,
       type: roomType || 'public',
-      style: roomStyle || 'chat',
       createdByUserId: this._userId,
       createdAt: Firebase.ServerValue.TIMESTAMP
     };
@@ -394,7 +391,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
   Firechat.prototype.enterRoom = function(roomId) {
     var self = this;
     self.getRoom(roomId, function(room) {
-    //console.log('qqq room:', room);
       var roomName = room.name;
 
       if (!roomId || !roomName) return;
@@ -423,7 +419,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
       }
 
       // Invoke our callbacks before we start listening for new messages.
-      self._onEnterRoom({ id: roomId, name: roomName, style: room.style});
+      self._onEnterRoom({ id: roomId, name: roomName });
 
       // Setup message listeners
       self._roomRef.child(roomId).once('value', function(snapshot) {
@@ -431,8 +427,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
           self._onNewMessage(roomId, snapshot);
         }, /* onCancel */ function() {
           // Turns out we don't have permission to access these messages.
-          //console.log('cannot read');
-          //self.leaveRoom(roomId);
+          self.leaveRoom(roomId);
         }, /* context */ self);
 
         self._messageRef.child(roomId).limitToLast(self._options.numMaxMessages).on('child_removed', function(snapshot) {
@@ -863,8 +858,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     },
 
     _onEnterRoom: function(room) {
-        //console.log('qqq:room', room);
-      this.attachTab(room.id, room.name, room.style);
+      this.attachTab(room.id, room.name);
     },
     _onLeaveRoom: function(roomId) {
       this.removeTab(roomId);
@@ -917,7 +911,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
       if (invitation.status && invitation.status === 'accepted') {
         $prompt = this.prompt('Accepted', template(invitation));
         this._chat.getRoom(invitation.roomId, function(room) {
-        //console.log('qqq:room', room);
           self.attachTab(invitation.roomId, room.name);
         });
       } else {
@@ -1366,7 +1359,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
             $prompt.find('[data-toggle=accept]').first().click(function() {
               $prompt.remove();
               var roomName = 'Private Chat';
-              self._chat.createRoom(roomName, 'private', 'chat', function(roomId) {
+              self._chat.createRoom(roomName, 'private', function(roomId) {
                 self._chat.inviteUser(userId, roomId, roomName);
               });
               return false;
@@ -1384,8 +1377,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
    */
   FirechatUI.prototype._bindForRoomListing = function() {
     var self = this,
-        $createFormPromptButton = $('#firechat-btn-create-form-prompt'),
-        $createFormButton = $('#firechat-btn-create-form'),
         $createRoomPromptButton = $('#firechat-btn-create-room-prompt'),
         $createRoomButton = $('#firechat-btn-create-room'),
         renderRoomList = function(event) {
@@ -1393,20 +1384,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
 
           self.sortListLexicographically('#firechat-room-list');
         };
-
-    // Handle click of the create new form prompt-button.
-    $createFormPromptButton.bind('click', function(event) {
-      self.promptCreateForm();
-      return false;
-    });
-
-    // Handle click of the create new form button.
-    $createFormButton.bind('click', function(event) {
-      var roomName = $('#firechat-input-room-name').val();
-      $('#firechat-prompt-create-form').remove();
-      self._chat.createRoom(roomName);
-      return false;
-    });
 
     // Handle click of the create new room prompt-button.
     $createRoomPromptButton.bind('click', function(event) {
@@ -1611,7 +1588,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
    * @param    {string}    roomId
    * @param    {string}    roomName
    */
-  FirechatUI.prototype.attachTab = function(roomId, roomName, style) {
+  FirechatUI.prototype.attachTab = function(roomId, roomName) {
     var self = this;
 
     // If this tab already exists, give it focus.
@@ -1629,16 +1606,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     var tabTemplate = FirechatDefaultTemplates["templates/tab-content.html"];
     var $tabContent = $(tabTemplate(room));
     this.$tabContent.prepend($tabContent);
-
-    //console.log('QQQ:room',room);
-    if (style === 'form'){
-        this.$tabContent.find('[id=form-type]').show();
-        this.$tabContent.find('[id=chat-type]').hide();
-     } else {
-        this.$tabContent.find('[id=form-type]').hide();
-        this.$tabContent.find('[id=chat-type]').show();
-    }
-
     var $messages = $('#firechat-messages' + roomId);
 
     // Keep a reference to the message listing for later use.
@@ -1654,18 +1621,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         return false;
       }
     });
-    // Attach on-enter event to textarea.
-    //var $textarea2 = $tabContent.find('textarea').first().next();
-    //var $textarea2 = $tabContent.find('textarea')[1];
-    var $textarea2 = $tabContent.find('textarea[class=form1]').first();
-    $textarea2.bind('keydown', function(e) {
-      var message = self.trimWithEllipsis($textarea2.val(), self.maxLengthMessage);
-      if ((e.which === 13) && (message !== '')) {
-        $textarea2.val('');
-        self._chat.sendMessage(roomId, message);
-        return false;
-      }
-    });
 
     // Populate and render the tab menu template.
     var tabListTemplate = FirechatDefaultTemplates["templates/tab-menu-item.html"];
@@ -1675,13 +1630,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     // Attach on-shown event to move tab to front and scroll to bottom.
     $tab.bind('shown', function(event) {
       $messages.scrollTop($messages[0].scrollHeight);
-    if (style === 'form'){
-        $tabContent.find('[id=form-type]').show();
-        $tabContent.find('[id=chat-type]').hide();
-     } else {
-        $tabContent.find('[id=form-type]').hide();
-        $tabContent.find('[id=chat-type]').show();
-    }
     });
 
     // Dynamically update the width of each tab based upon the number open.
@@ -1885,47 +1833,6 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         var name = $prompt.find('[data-input=firechat-room-name]').first().val();
         if (name !== '') {
           self._chat.createRoom(name, 'public');
-          $prompt.remove();
-          return false;
-        }
-      }
-    });
-  };
-
-  /**
-   * Launch a prompt to allow the user to create a new form.
-   */
-  FirechatUI.prototype.promptCreateForm = function() {
-    var self = this;
-    var template = FirechatDefaultTemplates["templates/prompt-create-private-form.html"];
-
-    var $prompt = this.prompt('Create Private Form', template({
-      maxLengthRoomName: this.maxLengthRoomName,
-      isModerator: self._chat.userIsModerator()
-    }));
-    $prompt.find('a.close').first().click(function() {
-      $prompt.remove();
-      return false;
-    });
-
-
-    $prompt.find('[data-toggle=submit]').first().click(function() {
-      var name = $prompt.find('[data-input=firechat-room-name]').first().val();
-      if (name !== '') {
-        //self._chat.createRoom(name, 'private', 'form');
-        self._chat.createRoom(name, 'public', 'form');
-        $prompt.remove();
-      }
-      return false;
-    });
-
-    $prompt.find('[data-input=firechat-room-name]').first().focus();
-    $prompt.find('[data-input=firechat-room-name]').first().bind('keydown', function(e) {
-      if (e.which === 13) {
-        var name = $prompt.find('[data-input=firechat-room-name]').first().val();
-        if (name !== '') {
-          //self._chat.createRoom(name, 'private', 'form');
-          self._chat.createRoom(name, 'public', 'form');
           $prompt.remove();
           return false;
         }
