@@ -1660,7 +1660,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     var $textarea2 = $tabContent.find('input[class=form1]').first();
     var $select2 = $tabContent.find('select[class=form1]').first();
     $textarea2.bind('keydown', function(e) {
-      var message = self.trimWithEllipsis($select2.val() +' ' +$textarea2.val(), self.maxLengthMessage);
+      var message = self.trimWithEllipsis($select2.val() +' $' +$textarea2.val() + ' (USD)', self.maxLengthMessage);
       if ((e.which === 13) && (message !== '')) {
         $textarea2.val('');
         self._chat.sendMessage(roomId, message);

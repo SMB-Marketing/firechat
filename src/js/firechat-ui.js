@@ -38,7 +38,7 @@
     // Define some constants regarding maximum lengths, client-enforced.
     this.maxLengthUsername = 15;
     this.maxLengthUsernameDisplay = 15;
-    this.maxLengthRoomName = 24;
+    this.maxLengthRoomName = 48;
     this.maxLengthMessage = 120;
     this.maxUserSearchResults = 100;
 
@@ -932,9 +932,10 @@
     // Attach on-enter event to textarea.
     //var $textarea2 = $tabContent.find('textarea').first().next();
     //var $textarea2 = $tabContent.find('textarea')[1];
-    var $textarea2 = $tabContent.find('textarea[class=form1]').first();
+    var $textarea2 = $tabContent.find('input[class=form1]').first();
+    var $select2 = $tabContent.find('select[class=form1]').first();
     $textarea2.bind('keydown', function(e) {
-      var message = self.trimWithEllipsis($textarea2.val(), self.maxLengthMessage);
+      var message = self.trimWithEllipsis($select2.val() +' $' +$textarea2.val() + ' (USD)', self.maxLengthMessage);
       if ((e.which === 13) && (message !== '')) {
         $textarea2.val('');
         self._chat.sendMessage(roomId, message);
@@ -1174,7 +1175,7 @@
     var self = this;
     var template = FirechatDefaultTemplates["templates/prompt-create-private-form.html"];
 
-    var $prompt = this.prompt('Create Private Form', template({
+    var $prompt = this.prompt('Create Form', template({
       maxLengthRoomName: this.maxLengthRoomName,
       isModerator: self._chat.userIsModerator()
     }));

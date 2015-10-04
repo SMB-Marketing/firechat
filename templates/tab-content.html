@@ -55,7 +55,13 @@
   </div>
 
   <div id='form-type' class='clearfix'>
-    <label>Fill in:</label>
-    <textarea class='form1' id='form-textarea<%- id %>' placeholder='Answer the questions here...'></textarea>
+    <label>Fill in: (press Enter to submit)</label>
+    <!-- <textarea class='form1' id='form-textarea<%- id %>' placeholder='Answer the questions here...'></textarea> -->
+    <select class='form1' id='form-textarea<%- id %>' >
+    <option value='Yes'>Yes</option>
+    <option value='No'>No</option>
+    </select>
+    <input class='form1' placeholder='Enter bet amount (USD)'></input>
+
   </div>
 </div>
