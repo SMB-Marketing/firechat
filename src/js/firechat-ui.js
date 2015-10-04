@@ -138,7 +138,8 @@
     },
 
     _onEnterRoom: function(room) {
-      this.attachTab(room.id, room.name);
+        //console.log('qqq:room', room);
+      this.attachTab(room.id, room.name, room.style);
     },
     _onLeaveRoom: function(roomId) {
       this.removeTab(roomId);
@@ -191,6 +192,7 @@
       if (invitation.status && invitation.status === 'accepted') {
         $prompt = this.prompt('Accepted', template(invitation));
         this._chat.getRoom(invitation.roomId, function(room) {
+        //console.log('qqq:room', room);
           self.attachTab(invitation.roomId, room.name);
         });
       } else {
@@ -639,7 +641,7 @@
             $prompt.find('[data-toggle=accept]').first().click(function() {
               $prompt.remove();
               var roomName = 'Private Chat';
-              self._chat.createRoom(roomName, 'private', function(roomId) {
+              self._chat.createRoom(roomName, 'private', 'chat', function(roomId) {
                 self._chat.inviteUser(userId, roomId, roomName);
               });
               return false;
@@ -657,6 +659,8 @@
    */
   FirechatUI.prototype._bindForRoomListing = function() {
     var self = this,
+        $createFormPromptButton = $('#firechat-btn-create-form-prompt'),
+        $createFormButton = $('#firechat-btn-create-form'),
         $createRoomPromptButton = $('#firechat-btn-create-room-prompt'),
         $createRoomButton = $('#firechat-btn-create-room'),
         renderRoomList = function(event) {
@@ -664,6 +668,20 @@
 
           self.sortListLexicographically('#firechat-room-list');
         };
+
+    // Handle click of the create new form prompt-button.
+    $createFormPromptButton.bind('click', function(event) {
+      self.promptCreateForm();
+      return false;
+    });
+
+    // Handle click of the create new form button.
+    $createFormButton.bind('click', function(event) {
+      var roomName = $('#firechat-input-room-name').val();
+      $('#firechat-prompt-create-form').remove();
+      self._chat.createRoom(roomName);
+      return false;
+    });
 
     // Handle click of the create new room prompt-button.
     $createRoomPromptButton.bind('click', function(event) {
@@ -868,7 +886,7 @@
    * @param    {string}    roomId
    * @param    {string}    roomName
    */
-  FirechatUI.prototype.attachTab = function(roomId, roomName) {
+  FirechatUI.prototype.attachTab = function(roomId, roomName, style) {
     var self = this;
 
     // If this tab already exists, give it focus.
@@ -886,6 +904,16 @@
     var tabTemplate = FirechatDefaultTemplates["templates/tab-content.html"];
     var $tabContent = $(tabTemplate(room));
     this.$tabContent.prepend($tabContent);
+
+    //console.log('QQQ:room',room);
+    if (style === 'form'){
+        this.$tabContent.find('[id=form-type]').show();
+        this.$tabContent.find('[id=chat-type]').hide();
+     } else {
+        this.$tabContent.find('[id=form-type]').hide();
+        this.$tabContent.find('[id=chat-type]').show();
+    }
+
     var $messages = $('#firechat-messages' + roomId);
 
     // Keep a reference to the message listing for later use.
@@ -901,6 +929,18 @@
         return false;
       }
     });
+    // Attach on-enter event to textarea.
+    //var $textarea2 = $tabContent.find('textarea').first().next();
+    //var $textarea2 = $tabContent.find('textarea')[1];
+    var $textarea2 = $tabContent.find('textarea[class=form1]').first();
+    $textarea2.bind('keydown', function(e) {
+      var message = self.trimWithEllipsis($textarea2.val(), self.maxLengthMessage);
+      if ((e.which === 13) && (message !== '')) {
+        $textarea2.val('');
+        self._chat.sendMessage(roomId, message);
+        return false;
+      }
+    });
 
     // Populate and render the tab menu template.
     var tabListTemplate = FirechatDefaultTemplates["templates/tab-menu-item.html"];
@@ -910,6 +950,13 @@
     // Attach on-shown event to move tab to front and scroll to bottom.
     $tab.bind('shown', function(event) {
       $messages.scrollTop($messages[0].scrollHeight);
+    if (style === 'form'){
+        $tabContent.find('[id=form-type]').show();
+        $tabContent.find('[id=chat-type]').hide();
+     } else {
+        $tabContent.find('[id=form-type]').hide();
+        $tabContent.find('[id=chat-type]').show();
+    }
     });
 
     // Dynamically update the width of each tab based upon the number open.
@@ -1113,6 +1160,47 @@
         var name = $prompt.find('[data-input=firechat-room-name]').first().val();
         if (name !== '') {
           self._chat.createRoom(name, 'public');
+          $prompt.remove();
+          return false;
+        }
+      }
+    });
+  };
+
+  /**
+   * Launch a prompt to allow the user to create a new form.
+   */
+  FirechatUI.prototype.promptCreateForm = function() {
+    var self = this;
+    var template = FirechatDefaultTemplates["templates/prompt-create-private-form.html"];
+
+    var $prompt = this.prompt('Create Private Form', template({
+      maxLengthRoomName: this.maxLengthRoomName,
+      isModerator: self._chat.userIsModerator()
+    }));
+    $prompt.find('a.close').first().click(function() {
+      $prompt.remove();
+      return false;
+    });
+
+
+    $prompt.find('[data-toggle=submit]').first().click(function() {
+      var name = $prompt.find('[data-input=firechat-room-name]').first().val();
+      if (name !== '') {
+        //self._chat.createRoom(name, 'private', 'form');
+        self._chat.createRoom(name, 'public', 'form');
+        $prompt.remove();
+      }
+      return false;
+    });
+
+    $prompt.find('[data-input=firechat-room-name]').first().focus();
+    $prompt.find('[data-input=firechat-room-name]').first().bind('keydown', function(e) {
+      if (e.which === 13) {
+        var name = $prompt.find('[data-input=firechat-room-name]').first().val();
+        if (name !== '') {
+          //self._chat.createRoom(name, 'private', 'form');
+          self._chat.createRoom(name, 'public', 'form');
           $prompt.remove();
           return false;
         }

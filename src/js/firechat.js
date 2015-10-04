@@ -283,7 +283,7 @@
   };
 
   // Create and automatically enter a new chat room.
-  Firechat.prototype.createRoom = function(roomName, roomType, callback) {
+  Firechat.prototype.createRoom = function(roomName, roomType, roomStyle, callback) {
     var self = this,
         newRoomRef = this._roomRef.push();
 
@@ -291,6 +291,7 @@
       id: newRoomRef.key(),
       name: roomName,
       type: roomType || 'public',
+      style: roomStyle || 'chat',
       createdByUserId: this._userId,
       createdAt: Firebase.ServerValue.TIMESTAMP
     };
@@ -314,6 +315,7 @@
   Firechat.prototype.enterRoom = function(roomId) {
     var self = this;
     self.getRoom(roomId, function(room) {
+    //console.log('qqq room:', room);
       var roomName = room.name;
 
       if (!roomId || !roomName) return;
@@ -342,7 +344,7 @@
       }
 
       // Invoke our callbacks before we start listening for new messages.
-      self._onEnterRoom({ id: roomId, name: roomName });
+      self._onEnterRoom({ id: roomId, name: roomName, style: room.style});
 
       // Setup message listeners
       self._roomRef.child(roomId).once('value', function(snapshot) {
@@ -350,7 +352,8 @@
           self._onNewMessage(roomId, snapshot);
         }, /* onCancel */ function() {
           // Turns out we don't have permission to access these messages.
-          self.leaveRoom(roomId);
+          //console.log('cannot read');
+          //self.leaveRoom(roomId);
         }, /* context */ self);
 
         self._messageRef.child(roomId).limitToLast(self._options.numMaxMessages).on('child_removed', function(snapshot) {
