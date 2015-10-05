@@ -466,14 +466,16 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     self._onLeaveRoom(roomId);
   };
 
-  Firechat.prototype.sendMessage = function(roomId, messageContent, messageType, cb) {
+  Firechat.prototype.sendMessage = function(roomId, messageContent, messageType, cb, amountparm, offertypeparm) {
     var self = this,
         message = {
           userId: self._userId,
           name: self._userName,
           timestamp: Firebase.ServerValue.TIMESTAMP,
           message: messageContent,
-          type: messageType || 'default'
+          type: messageType || 'default',
+          amount: amountparm || null,
+          offertype: offertypeparm || null
         },
         newMessageRef;
 
@@ -1662,8 +1664,8 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     $textarea2.bind('keydown', function(e) {
       var message = self.trimWithEllipsis($select2.val() +' $' +$textarea2.val() + ' (USD)', self.maxLengthMessage);
       if ((e.which === 13) && (message !== '')) {
+        self._chat.sendMessage(roomId, message, 'default', undefined, $textarea2.val(), $select2.val());
         $textarea2.val('');
-        self._chat.sendMessage(roomId, message);
         return false;
       }
     });

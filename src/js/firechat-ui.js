@@ -937,8 +937,8 @@
     $textarea2.bind('keydown', function(e) {
       var message = self.trimWithEllipsis($select2.val() +' $' +$textarea2.val() + ' (USD)', self.maxLengthMessage);
       if ((e.which === 13) && (message !== '')) {
+        self._chat.sendMessage(roomId, message, 'default', undefined, $textarea2.val(), $select2.val());
         $textarea2.val('');
-        self._chat.sendMessage(roomId, message);
         return false;
       }
     });

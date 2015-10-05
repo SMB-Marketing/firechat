@@ -387,14 +387,16 @@
     self._onLeaveRoom(roomId);
   };
 
-  Firechat.prototype.sendMessage = function(roomId, messageContent, messageType, cb) {
+  Firechat.prototype.sendMessage = function(roomId, messageContent, messageType, cb, amountparm, offertypeparm) {
     var self = this,
         message = {
           userId: self._userId,
           name: self._userName,
           timestamp: Firebase.ServerValue.TIMESTAMP,
           message: messageContent,
-          type: messageType || 'default'
+          type: messageType || 'default',
+          amount: amountparm || null,
+          offertype: offertypeparm || null
         },
         newMessageRef;
 
