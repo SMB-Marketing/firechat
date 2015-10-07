@@ -1,3 +1,7 @@
+# A simple modification to Firechat to explore building real time fake betting applications
+
+[Demo] (https://firechat-test-smb.firebaseapp.com/)
+
 # Firechat
 
 [![Version](https://badge.fury.io/gh/firebase%2Ffirechat.svg)](http://badge.fury.io/gh/firebase%2Ffirechat)
