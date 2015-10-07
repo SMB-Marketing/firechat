@@ -1,4 +1,6 @@
-# A simple modification to Firechat to explore building real time fake betting applications
+# Fork of Firechat
+
+A simple modification to Firechat to explore building real time fake betting applications
 
 [Demo] (https://firechat-test-smb.firebaseapp.com/)
 
